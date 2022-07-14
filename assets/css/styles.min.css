@@ -1,1 +1,1 @@
-*{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box}
+*{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box}.dashboard form{display:grid;grid-template-columns:repeat(4,1fr);-webkit-column-gap:48px;-moz-column-gap:48px;column-gap:48px;row-gap:48px}.dashboard form input,.dashboard form select{width:100%}section{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.section_wrapper{width:1600px}input,select{border-radius:12px;padding:6px 24px;font-size:18px;outline:0}

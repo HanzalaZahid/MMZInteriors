@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <title>Dashboard</title>
+</head>
+<body class="dashboard">
+    <div class="page_wrapper">
+        <section class="search_records">
+            <div class="section_wrapper">
+                <form action="" class="search_beneficary_records_form">
+                    <div class="input_container">
+                        <input type="text" title="Enter Beneficiary" placeholder="Enter Beneficiary" name="beneficiary" class="input_beneficiary">
+                    </div>
+                    <div class="input_container">
+                        <input type="date" title="Select Starting Date" name="date_from" class="input_date">
+                    </div>
+                    <div class="input_container">
+                        <input type="date" title="Select Ending Date" name="date_upto" class="input_date">
+                    </div>
+                    <div class="input_container">
+                        <input type="submit" title="Search" name="beneficiary_submit" class="input_submit" value="Search">
+                    </div>
+                </form>
+                <form action="" class="search_project_records_form">
+                    <div class="input_container">
+                        <select title="Select Year" name="dropdown_project_year_select" class="project_year_select">
+                            <option value="0">--Select Year--</option>
+                            <option value="1">2022</option>
+                            <option value="2">2021</option>
+                            <option value="3">2020</option>
+                            <option value="4">2019</option>
+                            <option value="5">2018</option>
+                            <option value="6">2017</option>
+                        </select>
+                    </div>
+                    <div class="input_container">
+                        <select title="Select Project" name="dropdown_project_select" class="project_select">
+                            <option value="0">--Select Project--</option>
+                            <option value="1">Project Name</option>
+                            <option value="2">Project Name</option>
+                            <option value="3">Project Name</option>
+                            <option value="4">Project Name</option>
+                            <option value="5">Project Name</option>
+                        </select>
+                    </div>
+                    <div class="input_container">
+                    </div>
+                    <div class="input_container">
+                        <input type="submit" title="Search" name="project_submit" class="input_submit" value="Search">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

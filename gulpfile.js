@@ -10,6 +10,7 @@ function sass_sub(callback) {
     return gulp.src('sass/**/*.+(scss|sass)')
       .pipe(sass()) // Using gulp-sass
       .pipe(autoprefixer('last 2 version'))
+      .pipe(gulp.dest('assets/css/'))
       .pipe(cleanCSS())
       .pipe(concat('styles.min.css'))
       .pipe(gulp.dest('assets/css/'))
@@ -21,6 +22,7 @@ function sass_main(callback) {
     return gulp.src('sass/*.+(scss|sass)')
       .pipe(sass()) // Using gulp-sass
       .pipe(autoprefixer('last 2 version'))
+      .pipe(gulp.dest('assets/css/'))
       .pipe(cleanCSS())
       .pipe(concat('styles.min.css'))
       .pipe(gulp.dest('assets/css/'))
