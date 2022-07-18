@@ -1,0 +1,111 @@
+header
+{
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 84px;
+    box-shadow: -3px 0px 5px 4px #00000011;
+    z-index: 100;
+    .header_container
+    {
+        @include sbAlign();
+        .left
+        {
+            .logo
+            {
+                @include placeMiddle();
+                height: 84px;
+                width: 320px;
+                @include simpleAnchor;
+                border-right: $border;
+                .box_container
+                {
+                    @include placeMiddle;
+                    img
+                    {
+                        height: 70%;
+                        width: 70%;
+                    }
+                }
+
+            }
+    
+        }
+        .right
+        {
+            padding-right: 48px;
+            padding-left: 18px;
+            border-left: $border;
+            @include verticalAlign(center);
+            .user
+            {
+                @include verticalAlign(center);
+                .avatar
+                {
+                    height: 56px;
+                    width: 56px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 12px;
+                    img
+                    {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .username
+                {
+                    // font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+nav
+{
+    background-color: $secondaryBackground;
+    height: calc(100vh - 84px);
+    position: absolute;
+    left: 0px;
+    top: 84px;
+    width: 320px;
+
+    .nav
+    {
+        li
+        {
+        
+            a
+            {
+                @include verticalAlign(center);
+                text-decoration: none;
+                color: $primaryFontColor;
+                font-weight: 600;
+                height: 100%;
+                width: 100%;
+                font-size: 18px;
+                padding: 6px 16px 6px 0px;
+                border-left: 12px solid transparent;
+                &:hover
+                {
+                    background-color: $hoverBackground;
+                    border-left-color: $redColor;
+                    *
+                    {
+                        color: black;
+                    }
+                }
+                .icon
+                {
+                    width: 48px;
+                    height: 48px;
+                    @include placeMiddle;
+                } 
+            }
+        }
+
+    }
+}

@@ -3,6 +3,15 @@
     display: flex;
     justify-content: center;
 }
+@mixin placeMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin verticalAlign($position) {
+    display: flex;
+    align-items: $position;
+}
 @mixin sbAlign
 {
     display: flex;
@@ -21,4 +30,8 @@
     grid-template-columns: repeat($columns, 1fr);
     column-gap: $columnGap;
     row-gap: $rowGap;
+}
+@mixin simpleAnchor {
+    text-decoration: none;
+    color: $primaryFontColor;
 }
