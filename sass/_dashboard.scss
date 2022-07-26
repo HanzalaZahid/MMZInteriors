@@ -1,12 +1,5 @@
 .dashboard
 {
-    background-color: $bodyBackground;
-    form
-    {
-        @include grid(4, 48px);
-        input, select
-        {
-            width: 100%;
-        }
-    }
+    
+
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/js/nav.js" defer></script>
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dashboard</title>
@@ -32,72 +34,61 @@
 
         <div class="nav">
             <ul>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-house"></i></div>
-                    <div class="text">Dashboard</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-building"></i></div>
-                    <div class="text">Projects</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-money-check-dollar"></i></div>
-                    <div class="text">Transactions</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-shop"></i></div>
-                    <div class="text">Purchasing</div>
-                </a></li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-house"></i></div>
+                        <div class="text">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-building"></i></div>
+                        <div class="text">Projects</div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                        <div class="text">Transactions</div>
+                    </a>
+                    <div class="subnav">
+                        <ul>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">Add Record</a></li>
+                            <li><a href="#">View Record</a></li>
+                            <li><a href="#">Beneficiary Management</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-shop"></i></div>
+                        <div class="text">Purchasing</div>
+                    </a>
+                    <div class="subnav">
+                        <ul>
+                            <li><a href="#">Purchasing</a></li>
+                            <li><a href="#">Add Record</a></li>
+                            <li><a href="#">View Record</a></li>
+                            <li><a href="#">Beneficiary Management</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
-    <!-- <div class="page_wrapper">
-        <section class="search_records">
-            <div class="section_wrapper">
-                <form action="" class="search_beneficary_records_form">
-                    <div class="input_container">
-                        <input type="text" title="Enter Beneficiary" placeholder="Enter Beneficiary" name="beneficiary" class="input_beneficiary">
-                    </div>
-                    <div class="input_container">
-                        <input type="date" title="Select Starting Date" name="date_from" class="input_date">
-                    </div>
-                    <div class="input_container">
-                        <input type="date" title="Select Ending Date" name="date_upto" class="input_date">
-                    </div>
-                    <div class="input_container">
-                        <input type="submit" title="Search" name="beneficiary_submit" class="input_submit" value="Search">
-                    </div>
-                </form>
-                <form action="" class="search_project_records_form">
-                    <div class="input_container">
-                        <select title="Select Year" name="dropdown_project_year_select" class="project_year_select">
-                            <option value="0">--Select Year--</option>
-                            <option value="1">2022</option>
-                            <option value="2">2021</option>
-                            <option value="3">2020</option>
-                            <option value="4">2019</option>
-                            <option value="5">2018</option>
-                            <option value="6">2017</option>
-                        </select>
-                    </div>
-                    <div class="input_container">
-                        <select title="Select Project" name="dropdown_project_select" class="project_select">
-                            <option value="0">--Select Project--</option>
-                            <option value="1">Project Name</option>
-                            <option value="2">Project Name</option>
-                            <option value="3">Project Name</option>
-                            <option value="4">Project Name</option>
-                            <option value="5">Project Name</option>
-                        </select>
-                    </div>
-                    <div class="input_container">
-                    </div>
-                    <div class="input_container">
-                        <input type="submit" title="Search" name="project_submit" class="input_submit" value="Search">
-                    </div>
-                </form>
+    <div class="page_content">
+        <div class="header">
+            <div class="left">
+                <div class="title">
+                    DASHBOARD
+                </div>
             </div>
-        </section>
-    </div> -->
+            <div class="right">
+                RIGHT3
+            </div>
+        </div>
+    </div>
 </body>
 </html>

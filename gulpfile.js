@@ -4,6 +4,7 @@ var sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
+var connect = require('gulp-connect-php');
 var browserSync = require('browser-sync').create();
 
 function sass_sub(callback) {
@@ -53,7 +54,7 @@ function watch() {
     gulp.watch("sass/**/*.+(scss|sass)", sass_sub);
     gulp.watch("sass/*.+(scss|sass)", sass_main);
     // gulp.watch('./assets/css/*.css').on('change', clean_css);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./*.*").on('change', browserSync.reload);
 }
 
 gulp.task('sass_sub', sass_sub);

@@ -12,19 +12,25 @@
 @import "./header";
 @import "./dashboard";
 
-section
+body
 {
-    @include centerAlign
-}
-.section_wrapper
-{
-    width: 1600px;
-}
-input, select
-{
-    border-radius: 12px;
-    padding: 6px 24px;
-    font-size: 18px;
-    outline: none;
-
+    background-color: $bodyBackground;
+    .page_content
+    {
+        margin-top: 84px;
+        margin-left: 320px;
+        padding: 28px 22px;
+        .header
+        {
+            @include sbAlign();
+            .left
+            {
+                .title
+                {
+                    font-size: 38px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }

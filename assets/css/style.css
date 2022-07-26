@@ -137,38 +137,36 @@ nav .nav li a .icon {
       -ms-flex-align: center;
           align-items: center;
 }
+nav .nav li > .subnav {
+  display: none;
+}
+nav .nav li > .subnav * {
+  font-size: 14px;
+}
+nav .nav li > .subnav ul li a {
+  margin-left: 30px;
+  width: unset;
+  padding-left: 12px;
+  border-left-width: 8px;
+}
 
-.dashboard {
+body {
   background-color: #ebeef5;
 }
-.dashboard form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  -webkit-column-gap: 48px;
-     -moz-column-gap: 48px;
-          column-gap: 48px;
-  row-gap: 48px;
+body .page_content {
+  margin-top: 84px;
+  margin-left: 320px;
+  padding: 28px 22px;
 }
-.dashboard form input, .dashboard form select {
-  width: 100%;
-}
-
-section {
+body .page_content .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.section_wrapper {
-  width: 1600px;
-}
-
-input, select {
-  border-radius: 12px;
-  padding: 6px 24px;
-  font-size: 18px;
-  outline: none;
+body .page_content .header .left .title {
+  font-size: 38px;
+  font-weight: bold;
 }
