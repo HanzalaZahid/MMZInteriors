@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/js/nav.js" defer></script>
+    <!-- CDN -->
+    <!-- CDN -->
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Dashboard</title>
+</head>
+<body class="clients">
+    <div class="page_content">
+        <div class="header">
+            <div class="left">
+                <div class="title">
+                    Clients
+                </div>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+        <div class="content_body">
+            <table class="client_list_table list_table card">
+                <thead>
+                    <tr>
+                        <th>Client ID</th>
+                        <th>Client Name</th>
+                        <th>Total Projects</th>
+                        <th>Current Projects</th>
+                        <th>Total Invested</th>
+                        <th>Total Profit</th>
+                        <th>Due Payments</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>NDURE</td>
+                        <td>28</td>
+                        <td>2</td>
+                        <td>98,768,735</td>
+                        <td>8,768,735</td>
+                        <td>768,735</td>
+                        <td><button class="button_black">Change</button><button class="button_red">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Servis Shoes</td>
+                        <td>58</td>
+                        <td>3</td>
+                        <td>8,768,735</td>
+                        <td>768,735</td>
+                        <td>68,735</td>
+                        <td><button class="button_black">Change</button><button class="button_red">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        $('.client_list_table').DataTable();
+    </script>
+</body>
+</html>
