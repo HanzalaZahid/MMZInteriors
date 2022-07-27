@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./assets/plugins/jquery.js"></script>
     <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/behaviour.js" defer></script>
     <!-- CDN -->
     <!-- CDN -->
 
@@ -37,6 +38,7 @@
                     <tr>
                         <th>Client ID</th>
                         <th>Client Name</th>
+                        <th>Client Type</th>
                         <th>Total Projects</th>
                         <th>Current Projects</th>
                         <th>Total Invested</th>
@@ -49,25 +51,57 @@
                     <tr>
                         <td>1</td>
                         <td>NDURE</td>
+                        <td>Company</td>
                         <td>28</td>
                         <td>2</td>
                         <td>98,768,735</td>
                         <td>8,768,735</td>
                         <td>768,735</td>
-                        <td><button class="button_black">Change</button><button class="button_red">Delete</button></td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Servis Shoes</td>
+                        <td>Private</td>
                         <td>58</td>
                         <td>3</td>
                         <td>8,768,735</td>
                         <td>768,735</td>
                         <td>68,735</td>
-                        <td><button class="button_black">Change</button><button class="button_red">Delete</button></td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
+            <div class="dialog edit_client_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Edit Client</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <input type="text" id="client_name" name="input_client_name" class="client_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_type"></label>
+                                <select name="ddl_client_type" id="client_type">
+                                    <option value="0">--Select Catagory--</option>
+                                    <option value="1">Comapany</option>
+                                    <option value="2">Private</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer></footer>
+                </div>
+            </div>
         </div>
     </div>
     <script>

@@ -28,9 +28,9 @@ header .header_container {
           justify-content: space-between;
 }
 header .header_container .left .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -44,9 +44,9 @@ header .header_container .left .logo {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 header .header_container .left .logo .box_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -128,9 +128,9 @@ nav .nav li a:hover * {
 nav .nav li a .icon {
   width: 48px;
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -216,4 +216,70 @@ button {
 .button_black:hover {
   background-color: #494949;
   color: white;
+}
+
+select {
+  cursor: pointer;
+}
+
+.dialog {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.416);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.dialog .model {
+  width: 40%;
+}
+.dialog .model .head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 16px 28px;
+}
+.dialog .model .head .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dialog .model .head .container .left {
+  font-size: 22px;
+  font-weight: 500;
+}
+.dialog .model .head .container .right i {
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+.dialog .model .head .container .right i:hover {
+  color: #ad1b3c;
+  background-color: #f3f1f4;
+}
+.dialog .model .body {
+  padding: 28px;
+}
+.dialog .model button {
+  width: 120px;
+  padding: 6px 0px;
 }

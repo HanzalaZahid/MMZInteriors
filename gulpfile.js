@@ -4,7 +4,7 @@ var sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
-var connect = require('gulp-connect-php');
+// var connect = require('gulp-connect-php');
 var browserSync = require('browser-sync').create();
 
 function sass_sub(callback) {
