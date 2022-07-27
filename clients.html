@@ -29,7 +29,9 @@
                 </div>
             </div>
             <div class="right">
-
+                <div class="add_client">
+                    <button class="button_red button_add_client">Add Client</button>
+                </div>
             </div>
         </div>
         <div class="content_body">
@@ -72,6 +74,58 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="dialog delete_client_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Delete Client</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="container">
+                            <div class="message">
+                                Are you sure you want to delete CLIENT NAME?
+                            </div>
+                            <div class="buttons">
+                                <button class="button_black">Cancel</button>
+                                <button class="button_red">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer></footer>
+                </div>
+            </div>
+            <div class="dialog add_client_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Add Client</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <input type="text" id="client_name" placeholder="Enter Client Name" name="input_new_client_name" class="client_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_type"></label>
+                                <select name="ddl_client_type" id="client_type">
+                                    <option value="0">--Select Catagory--</option>
+                                    <option value="1">Comapany</option>
+                                    <option value="2">Private</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Add Client</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer></footer>
+                </div>
+            </div>
             <div class="dialog edit_client_dialog">
                 <div class="model card">
                     <div class="head">
