@@ -13,23 +13,25 @@
 @import "./header";
 @import "./dashboard";
 @import "./clients";
+@import "./projects";
 
 body
 {
     background-color: $bodyBackground;
     .page_content
     {
-        margin-top: 84px;
-        margin-left: 320px;
+        margin-top: $headerHeight;
+        margin-left: $navWidth;
         padding: 28px 22px;
         .header
         {
+            margin-bottom: 22px;
             @include sbAlign();
             .left
             {
                 .title
                 {
-                    font-size: 38px;
+                    font-size: 34px;
                     font-weight: bold;
                 }
             }
@@ -48,7 +50,7 @@ body
         }
     }
 }
-.card
+.card, .dataTables_wrapper
 {
     background-color: white;
     border-radius: 8px;
@@ -58,8 +60,11 @@ body
 .dataTables_length,
 .dataTables_filter
 {
-    margin-bottom: 8px!important;
-    padding-top: 28px;
+    margin-bottom: 18px!important;
+}
+.dataTables_wrapper
+{
+    padding: 16px;
 }
 .list_table
 {

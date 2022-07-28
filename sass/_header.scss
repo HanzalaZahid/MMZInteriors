@@ -4,7 +4,7 @@ header
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 84px;
+    height: $headerHeight;
     box-shadow: -3px 0px 5px 4px #00000011;
     z-index: 100;
     .header_container
@@ -15,8 +15,8 @@ header
             .logo
             {
                 @include placeMiddle();
-                height: 84px;
-                width: 320px;
+                height: $headerHeight;
+                width: $navWidth;
                 @include simpleAnchor;
                 border-right: $border;
                 .box_container
@@ -67,11 +67,11 @@ header
 nav
 {
     background-color: $secondaryBackground;
-    height: calc(100vh - 84px);
+    height: calc(100vh - $headerHeight);
     position: absolute;
     left: 0px;
-    top: 84px;
-    width: 320px;
+    top: $headerHeight;
+    width: $navWidth;
 
     .nav
     {
@@ -86,7 +86,10 @@ nav
                 font-weight: 600;
                 height: 100%;
                 width: 100%;
-                font-size: 18px;
+                *
+                {
+                    font-size: 20px;
+                }
                 padding: 6px 16px 6px 0px;
                 border-left: 12px solid transparent;
                 &:hover

@@ -20,57 +20,57 @@
 
     <title>Dashboard</title>
 </head>
-<body class="clients">
+<body class="projects">
     
     <div class="page_content">
         <div class="header">
             <div class="left">
                 <div class="title">
-                    Clients
+                    Projects
                 </div>
             </div>
             <div class="right">
                 <div class="add_client">
-                    <button class="button_red button_add_client">Add Client</button>
+                    <button class="button_red button_add_project">Add Project</button>
                 </div>
             </div>
         </div>
         <div class="content_body">
-            <table class="client_list_table list_table card">
+            <table class="project_list_table list_table card">
                 <thead>
                     <tr>
-                        <th>Client ID</th>
-                        <th>Client Name</th>
-                        <th>Client Type</th>
-                        <th>Total Projects</th>
-                        <th>Current Projects</th>
+                        <th>Project ID</th>
+                        <th>Project Name</th>
+                        <th>City</th>
+                        <th>Starting Date</th>
+                        <th>Finishing Date</th>
                         <th>Total Invested</th>
                         <th>Total Profit</th>
-                        <th>Due Payments</th>
+                        <th>Client Name</th>
                         <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>NDURE</td>
-                        <td>Company</td>
-                        <td>28</td>
-                        <td>2</td>
+                        <td>NDURE UNIVERSITY ROAD</td>
+                        <td>Sargodha</td>
+                        <td>28-5-2022</td>
+                        <td>05-6-2022</td>
                         <td>98,768,735</td>
                         <td>8,768,735</td>
-                        <td>768,735</td>
+                        <td>NDURE</td>
                         <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Servis Shoes</td>
-                        <td>Private</td>
-                        <td>58</td>
-                        <td>3</td>
+                        <td>Servis Shoes Sahiwal</td>
+                        <td>Sahiwal</td>
+                        <td>28-5-2022</td>
+                        <td>05-6-2022</td>
                         <td>8,768,735</td>
                         <td>768,735</td>
-                        <td>68,735</td>
+                        <td>ShoeBox</td>
                         <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                 </tbody>
@@ -160,7 +160,7 @@
         </div>
     </div>
     <script>
-        $('.client_list_table').DataTable();
+        $('.project_list_table').DataTable();
     </script>
 </body>
 </html>

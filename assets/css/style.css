@@ -114,9 +114,11 @@ nav .nav li a {
   font-weight: 600;
   height: 100%;
   width: 100%;
-  font-size: 18px;
   padding: 6px 16px 6px 0px;
   border-left: 12px solid transparent;
+}
+nav .nav li a * {
+  font-size: 20px;
 }
 nav .nav li a:hover {
   background-color: #f3f1f4;
@@ -160,6 +162,7 @@ body .page_content {
   padding: 28px 22px;
 }
 body .page_content .header {
+  margin-bottom: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,14 +171,14 @@ body .page_content .header {
           justify-content: space-between;
 }
 body .page_content .header .left .title {
-  font-size: 38px;
+  font-size: 34px;
   font-weight: bold;
 }
 body .page_content .header .right button {
   width: 120px;
   padding: 6px 0px;
 }
-.card {
+.card, .dataTables_wrapper {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
@@ -183,8 +186,11 @@ body .page_content .header .right button {
 
 .dataTables_length,
 .dataTables_filter {
-  margin-bottom: 8px !important;
-  padding-top: 28px;
+  margin-bottom: 18px !important;
+}
+
+.dataTables_wrapper {
+  padding: 16px;
 }
 
 .list_table tr > td:last-child button {
