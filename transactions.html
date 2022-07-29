@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/behaviour.js" defer></script>
+    <!-- CDN -->
+    <!-- CDN -->
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Transactions</title>
+</head>
+<body class="transactions">
+    
+    <div class="page_content">
+        <div class="header">
+            <div class="left">
+                <div class="title">
+                    Transactions
+                </div>
+            </div>
+            <div class="right">
+                <div class="add_transaction">
+                    <button class="button_red button_add_transaction">Add Record</button>
+                </div>
+            </div>
+        </div>
+        <div class="sort_options card">
+            <form action="" class="sort">
+                <select name="beneficiarySelect" id="beneficiarySelect">
+                    <option value="0">--Select Beneficiary</option>
+                    <option value="1">Hanzala Zahid</option>
+                    <option value="2">Tayyab Zahid</option>
+                </select>
+                <input onblur="type='text'" onfocus="type='date'" placeholder="Transactions From" class="start_date">
+                <input onblur="type='text'" onfocus="type='date'" placeholder="Transactions Upto" class="finish_date">
+                <button type="submit" class="button_red submit_search">Sort</button>
+            </form>
+        </div>
+        <div class="content_body">
+            <table class="transaction_list_table list_table card">
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Beneficiary Name</th>
+                        <th>Paid In</th>
+                        <th>Account Number</th>
+                        <th>Purpose</th>
+                        <th>Project Name</th>
+                        <th>Date</th>
+                        <th>Amount(Rs)</th>
+                        <th>Account Used</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Hanzala Zahid</td>
+                        <td>Online</td>
+                        <td>09067900615003</td>
+                        <td>Personal Expenses</td>
+                        <td>ShoeBox Sahiwal</td>
+                        <td>22-7-2022</td>
+                        <td>15,000</td>
+                        <td>5503</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tayyab Zahid</td>
+                        <td>Cash</td>
+                        <td></td>
+                        <td>Batteires</td>
+                        <td>NDURE Jhang</td>
+                        <td>19-5-2022</td>
+                        <td>48,000</td>
+                        <td>8890</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="dialog delete_warning_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Delete Transaction</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="container">
+                            <div class="message">
+                                Are you sure you want to delete TRANSACTION DETAILS?
+                            </div>
+                            <div class="buttons">
+                                <button class="button_black button_cancel_delete">Cancel</button>
+                                <button class="button_red">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog add_transaction_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Add Transaction</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <div class="transaction_way inline_group">
+                                    <div class="radio_group inline_group">
+                                        <label for="account_new">Bank Account</label>
+                                        <input type="radio" class="account_radio" name="transaction_new_way" id="account_new" checked="checked">
+                                    </div>
+                                    <div class="radio_group inline_group">
+                                        <label for="cash_new">Cash</label>
+                                        <input type="radio" class="cash_radio" name="transaction_new_way" id="cash_new">
+                                    </div>
+                                </div>
+                                <select name="beneficiary_new_Select" id="beneficiary_new_select">
+                                    <option value="0">--Select Beneficiary--</option>
+                                    <option value="1">Hanzala Zahid</option>
+                                    <option value="2">Tayyab Zahid</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <input type="number" placeholder="Enter Amount" name="input_new_transaction_amount" id="input_new_transaction_amount">
+                            </div>
+                            <div class="form_group">
+                                <select name="project_new_select" id="select_new_project">
+                                    <option value="0">--Select Project--</option>
+                                    <option value="1">NDURE Jhang (code)</option>
+                                    <option value="2">Sahiwal ShoeBox (code)</option>
+                                </select>                            
+                            </div>
+                            <div class="form_group">
+                                <input type="text" name="transaction_new_purpose" placeholder="Enter Purpose">
+                            </div>
+                            <div class="form_group">
+                                <input type="date" name="transaction_new_date">
+                            </div>
+                            <div class="form_group">
+                                <select name="account_new_select" id="select_new_account">
+                                    <option value="0">--Select Account--</option>
+                                    <option value="1">09067900485503 HBL</option>
+                                    <option value="2">76889347392384 MEEZAN</option>
+                                </select>   
+                                <select name="transaction_new_select" id="select_new_transaction">
+                                    <option value="0">--Select Transaction--</option>
+                                    <option value="1">10,000 - 22-7-2022 (1)</option>
+                                    <option value="2">10,000 - 22-7-2022 (2)</option>
+                                    <option value="3">20,000 - 19-5-2021</option>
+                                </select>   
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Add Transaction</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog edit_transaction_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Edit Transaction</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <div class="transaction_way inline_group">
+                                    <div class="radio_group inline_group">
+                                        <label for="account">Bank Account</label>
+                                        <input type="radio" class="account_radio" name="transaction_new_way" id="account" checked="checked">
+                                    </div>
+                                    <div class="radio_group inline_group">
+                                        <label for="cash">Cash</label>
+                                        <input type="radio" class="cash_radio" name="transaction_new_way" id="cash">
+                                    </div>
+                                </div>
+                                <select name="beneficiarySelect" id="beneficiarySelect">
+                                    <option value="0">--Select Beneficiary--</option>
+                                    <option value="1">Hanzala Zahid</option>
+                                    <option value="2">Tayyab Zahid</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <input type="number" placeholder="Enter Amount" name="input_transaction_amount" id="input_transaction_amount">
+                            </div>
+                            <div class="form_group">
+                                <select name="projectSelect" id="select_project">
+                                    <option value="0">--Select Project--</option>
+                                    <option value="1">NDURE Jhang (code)</option>
+                                    <option value="2">Sahiwal ShoeBox (code)</option>
+                                </select>                            
+                            </div>
+                            <div class="form_group">
+                                <input type="text" name="transaction_purpose" placeholder="Enter Purpose">
+                            </div>
+                            <div class="form_group">
+                                <input type="date" name="transaction_date">
+                            </div>
+                            <div class="form_group">
+                                <select name="account_select" id="select_account">
+                                    <option value="0">--Select Account--</option>
+                                    <option value="1">09067900485503 HBL</option>
+                                    <option value="2">76889347392384 MEEZAN</option>
+                                </select>   
+                                <select name="transaction_select" id="select_transaction">
+                                    <option value="0">--Select Transaction--</option>
+                                    <option value="1">10,000 - 22-7-2022 (1)</option>
+                                    <option value="2">10,000 - 22-7-2022 (2)</option>
+                                    <option value="3">20,000 - 19-5-2021</option>
+                                </select>   
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Add Transaction</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.transaction_list_table').DataTable();
+    </script>
+</body>
+</html>

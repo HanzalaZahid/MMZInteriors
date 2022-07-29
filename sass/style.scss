@@ -14,7 +14,7 @@
 @import "./dashboard";
 @import "./clients";
 @import "./projects";
-
+@import './transactions';
 body
 {
     background-color: $bodyBackground;
@@ -49,6 +49,20 @@ body
 
         }
     }
+    .sort_options
+    {
+        margin-bottom: 22px;
+    }
+    .sort_options>form
+    {
+        @include sbAlign();
+        background-color: white;
+        
+    }
+}
+.card
+{
+    padding: 16px;
 }
 .card, .dataTables_wrapper
 {
@@ -91,6 +105,7 @@ button
     font-size: 18px;
     cursor: pointer;
     transition: all ease .3s;
+    min-width: 100px;
 }
 .button_black
 {
@@ -126,7 +141,14 @@ input
     border-radius: 4px;
     font-size: 16px;
 }
-
+input, select
+{
+    padding: 6px 16px;
+}
+label, input[type=radio]
+{
+    cursor: pointer;
+}
 .dialog
 {
     display: none;
@@ -141,10 +163,6 @@ input
     .model
     {
         width: 40%;
-        input, select
-        {
-            padding: 6px 16px;
-        }
         .head
         {
             border-bottom: $border;
@@ -200,6 +218,15 @@ input
                     }
                 }
             }
+            
+            .inline_group
+            {
+                display: flex;
+                input
+                {
+                    width: unset!important;
+                }
+            }
             padding: 28px;
             .form_group
             {
@@ -212,16 +239,29 @@ input
                 &:last-child
                 {
                     padding-bottom: 0px;
+                    display: flex;
+                    justify-content: end;
                 }
-                display: flex;
-                justify-content: end;
+                label
+                {
+                    margin-right: 12px;
+                }
+                input[type=radio]
+                {
+                    margin-right: 60px;
+                }
+                >.inline_group
+                {
+                    margin-bottom: 28px;
+                }
+
             }
             
         }
         button
         {
-            width: 120px;
-            padding: 6px 0px;
+            
+            padding: 6px 22px;
         }
     }
 }
