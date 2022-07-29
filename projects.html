@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Dashboard</title>
+    <title>Projects</title>
 </head>
 <body class="projects">
     
@@ -97,7 +97,7 @@
                     <footer></footer>
                 </div>
             </div>
-            <div class="dialog add_client_dialog">
+            <div class="dialog add_project_dialog">
                 <div class="model card">
                     <div class="head">
                         <div class="container">
@@ -108,49 +108,73 @@
                     <div class="body">
                         <form action="">
                             <div class="form_group">
-                                <label for="client_name"></label>
-                                <input type="text" id="client_name" placeholder="Enter Client Name" name="input_new_client_name" class="client_name">
+                                <label for="project_name"></label>
+                                <input type="text" id="project_name" placeholder="Enter Project Name" name="input_new_project_name" class="project_name">
                             </div>
                             <div class="form_group">
-                                <label for="client_type"></label>
-                                <select name="ddl_client_type" id="client_type">
-                                    <option value="0">--Select Catagory--</option>
-                                    <option value="1">Comapany</option>
-                                    <option value="2">Private</option>
+                                <label for="project_city"></label>
+                                <input type="text" id="project_city" placeholder="Enter City Name" name="input_new_city_name" class="city_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <select name="ddl_client_name" id="client_name">
+                                    <option value="0">--Select Client--</option>
+                                    <option value="1">NDURE</option>
+                                    <option value="2">Servis Shoes</option>
                                 </select>
                             </div>
                             <div class="form_group">
-                                <button class="button_red" type="submit">Add Client</button>
+                                <label for="project_date"></label>
+                                <input placeholder="Project Starting Date" onfocus="(this.type='date')" onblur="(this.type='text')" name="project_starting_date" id="project_start_date">
+                            </div>
+                            <div class="form_group">
+                                <label for="project_days"></label>
+                                <input type="number" placeholder="Enter Total Days for Project" name="project_days" id="project_days">
+                            </div>
+                            <div class="form_group">
+                                <button type="submit" class="button_red" name="project_submit">Add Project</button>
                             </div>
                         </form>
                     </div>
                     <footer></footer>
                 </div>
             </div>
-            <div class="dialog edit_client_dialog">
+            <div class="dialog edit_project_dialog">
                 <div class="model card">
                     <div class="head">
                         <div class="container">
-                            <div class="left">Edit Client</div>
+                            <div class="left">Edit Project</div>
                             <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
                         </div>
                     </div>
                     <div class="body">
                         <form action="">
                             <div class="form_group">
-                                <label for="client_name"></label>
-                                <input type="text" id="client_name" name="input_client_name" class="client_name">
+                                <label for="project_name"></label>
+                                <input type="text" id="project_name" name="input_project_name" class="project_name">
                             </div>
                             <div class="form_group">
-                                <label for="client_type"></label>
-                                <select name="ddl_client_type" id="client_type">
-                                    <option value="0">--Select Catagory--</option>
-                                    <option value="1">Comapany</option>
-                                    <option value="2">Private</option>
+                                <label for="city_name"></label>
+                                <input type="text" id="city_name" name="input_city_name" class="city_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <select name="ddl_client_name" id="client_name">
+                                    <option value="0">--Select Client--</option>
+                                    <option value="1">NDURE</option>
+                                    <option value="2">Servis</option>
                                 </select>
                             </div>
                             <div class="form_group">
-                                <button class="button_red" type="submit">Update</button>
+                                <label for="project_update_date"></label>
+                                <input placeholder="Project Starting Date" onfocus="(this.type='date')" onblur="(this.type='text')" name="project_update_starting_date" id="project_update_start_date">
+                            </div>
+                            <div class="form_group">
+                                <label for="project_update_days"></label>
+                                <input type="number" placeholder="Enter Total Days for Project" name="project_update_days" id="project_update_days">
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" name="update_project_submit" type="submit">Update</button>
                             </div>
                         </form>
                     </div>

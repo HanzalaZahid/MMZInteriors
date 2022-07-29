@@ -1,21 +1,25 @@
 $(document).ready(
     function()
     {
+        let allDialog = document.querySelectorAll('.dialog');
         let editClientDialog = document.querySelector('.edit_client_dialog');
+        let editProjectDialog = document.querySelector('.edit_project_dialog');
         let addClientDialog = document.querySelector('.add_client_dialog');
+        let addProjectDialog = document.querySelector('.add_project_dialog');
         let deleteWarningDialog = document.querySelector('.delete_warning_dialog');
-        $('.button_list_change').click(
+        $('.clients .button_list_change').click(
             function()
             {
                 editClientDialog.style.display = 'flex';
             }
         )
-        $('.button_dialog_close').click(
+        $('.projects .button_list_change').click(
             function()
             {
-                editClientDialog.style.display = 'none';;
+                editProjectDialog.style.display = 'flex';
             }
         )
+
         $('.button_list_delete').click(
             function()
             {
@@ -25,7 +29,13 @@ $(document).ready(
         $('.button_dialog_close').click(
             function()
             {
-                deleteWarningDialog.style.display = 'none';;
+                console.log(allDialog);
+                allDialog.forEach(
+                    function(box)
+                    {
+                        box.style.display= 'none';
+                    }
+                );
             }
         )
         $('.button_add_client').click(
@@ -34,10 +44,10 @@ $(document).ready(
                 addClientDialog.style.display = 'flex';
             }
         )
-        $('.button_dialog_close').click(
+        $('.button_add_project').click(
             function()
             {
-                addClientDialog.style.display = 'none';;
+                addProjectDialog.style.display = 'flex';
             }
         )
         $('.button_cancel_delete').click(

@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/behaviour.js" defer></script>
+    <!-- CDN -->
+    <!-- CDN -->
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dashboard</title>
+
+
+    <title>Projects</title>
 </head>
-<body class="dashboard">
+<body class="projects">
     <header>
         <div class="header_container">
             <div class="left">
@@ -32,22 +44,53 @@
 
         <div class="nav">
             <ul>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-house"></i></div>
-                    <div class="text">Dashboard</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-building"></i></div>
-                    <div class="text">Projects</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-money-check-dollar"></i></div>
-                    <div class="text">Transactions</div>
-                </a></li>
-                <li><a href="#">
-                    <div class="icon"><i class="fa-solid fa-shop"></i></div>
-                    <div class="text">Purchasing</div>
-                </a></li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-house"></i></div>
+                        <div class="text">Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                        <div class="text">Clients</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-building"></i></div>
+                        <div class="text">Projects</div>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                        <div class="text">Transactions</div>
+                    </a>
+                    <div class="subnav">
+                        <ul>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">Add Record</a></li>
+                            <li><a href="#">View Record</a></li>
+                            <li><a href="#">Beneficiary Management</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"><i class="fa-solid fa-shop"></i></div>
+                        <div class="text">Purchasing</div>
+                    </a>
+                    <div class="subnav">
+                        <ul>
+                            <li><a href="#">Purchasing</a></li>
+                            <li><a href="#">Add Record</a></li>
+                            <li><a href="#">View Record</a></li>
+                            <li><a href="#">Beneficiary Management</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -55,13 +98,165 @@
         <div class="header">
             <div class="left">
                 <div class="title">
-                    DASHBOARD
+                    Projects
                 </div>
             </div>
             <div class="right">
-                RIGHT
+                <div class="add_client">
+                    <button class="button_red button_add_project">Add Project</button>
+                </div>
+            </div>
+        </div>
+        <div class="content_body">
+            <table class="project_list_table list_table card">
+                <thead>
+                    <tr>
+                        <th>Project ID</th>
+                        <th>Project Name</th>
+                        <th>City</th>
+                        <th>Starting Date</th>
+                        <th>Finishing Date</th>
+                        <th>Total Invested</th>
+                        <th>Total Profit</th>
+                        <th>Client Name</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>NDURE UNIVERSITY ROAD</td>
+                        <td>Sargodha</td>
+                        <td>28-5-2022</td>
+                        <td>05-6-2022</td>
+                        <td>98,768,735</td>
+                        <td>8,768,735</td>
+                        <td>NDURE</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Servis Shoes Sahiwal</td>
+                        <td>Sahiwal</td>
+                        <td>28-5-2022</td>
+                        <td>05-6-2022</td>
+                        <td>8,768,735</td>
+                        <td>768,735</td>
+                        <td>ShoeBox</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="dialog delete_warning_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Delete Client</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="container">
+                            <div class="message">
+                                Are you sure you want to delete CLIENT NAME?
+                            </div>
+                            <div class="buttons">
+                                <button class="button_black button_cancel_delete">Cancel</button>
+                                <button class="button_red">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer></footer>
+                </div>
+            </div>
+            <div class="dialog add_project_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Add Client</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <label for="project_name"></label>
+                                <input type="text" id="project_name" placeholder="Enter Project Name" name="input_new_project_name" class="project_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="project_city"></label>
+                                <input type="text" id="project_city" placeholder="Enter City Name" name="input_new_city_name" class="city_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <select name="ddl_client_name" id="client_name">
+                                    <option value="0">--Select Client--</option>
+                                    <option value="1">NDURE</option>
+                                    <option value="2">Servis Shoes</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label for="project_date"></label>
+                                <input placeholder="Project Starting Date" onfocus="(this.type='date')" onblur="(this.type='text')" name="project_starting_date" id="project_start_date">
+                            </div>
+                            <div class="form_group">
+                                <label for="project_days"></label>
+                                <input type="number" placeholder="Enter Total Days for Project" name="project_days" id="project_days">
+                            </div>
+                            <div class="form_group">
+                                <button type="submit" class="button_red" name="project_submit">Add Project</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer></footer>
+                </div>
+            </div>
+            <div class="dialog edit_project_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Edit Project</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <label for="project_name"></label>
+                                <input type="text" id="project_name" name="input_project_name" class="project_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="city_name"></label>
+                                <input type="text" id="city_name" name="input_city_name" class="city_name">
+                            </div>
+                            <div class="form_group">
+                                <label for="client_name"></label>
+                                <select name="ddl_client_name" id="client_name">
+                                    <option value="0">--Select Client--</option>
+                                    <option value="1">NDURE</option>
+                                    <option value="2">Servis</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label for="project_update_date"></label>
+                                <input placeholder="Project Starting Date" onfocus="(this.type='date')" onblur="(this.type='text')" name="project_update_starting_date" id="project_update_start_date">
+                            </div>
+                            <div class="form_group">
+                                <label for="project_update_days"></label>
+                                <input type="number" placeholder="Enter Total Days for Project" name="project_update_days" id="project_update_days">
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" name="update_project_submit" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer></footer>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        $('.project_list_table').DataTable();
+    </script>
 </body>
 </html>
