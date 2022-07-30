@@ -42,7 +42,7 @@ body
         }
         .content_body
         {
-
+            
         }
     }
     .sort_options
@@ -91,6 +91,11 @@ body
             margin-right: 12px;
         }
     }
+}
+.red_font
+{
+    color: $redColor;
+    font-weight: 600;
 }
 button
 {
@@ -171,7 +176,7 @@ label, input[type=radio]
                 {
                     font-size: 22px;
                     font-weight: 500;
-    
+                    
                 }
                 .right
                 {
@@ -223,6 +228,12 @@ label, input[type=radio]
                 {
                     width: unset!important;
                 }
+                input[type=checkbox]
+                {
+                    margin-right: 18px;
+                    border-color: $redColor;
+                    background-color: $redColor;
+                }
             }
             padding: 28px;
             .form_group
@@ -255,6 +266,7 @@ label, input[type=radio]
             }
             
         }
-
+        
     }
 }
+@import './login';

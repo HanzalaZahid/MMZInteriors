@@ -1,5 +1,85 @@
 .dashboard
 {
-    
-
+    .content_body
+    {
+        @include grid(3, 22px);
+        .card
+        {
+            .title
+            {
+                font-weight: 700;
+                font-size: 22px;
+                margin-bottom: 12px;
+                line-height: 1;
+                text-align: center;
+            }
+            .project_list_container
+            {
+                margin-left: 22px;
+                margin-bottom: 8px;
+                .label
+                {
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+                ul
+                {
+                    list-style-type: none;
+                    margin-left: 22px;
+                    li
+                    {
+                        font-weight: 500;
+                    }
+                }
+            }
+            .current_project_list *
+            {
+                color: $redColor;
+            }
+            .upcomming_project_list *
+            {
+                color: $greenColor;
+            }
+        }
+        .pending_payments, .earnings
+        {
+            table
+            {
+                width: 100%;
+                tr
+                {
+                    th
+                    {
+                        font-size: 18px;
+                        font-weight: 600;
+                        padding-bottom: 12px;
+                    }
+                    td
+                    {
+                        font-weight: 500;
+                        color: $redColor;
+                    }
+                    text-align: left;
+                }
+            }
+        }
+        .earnings
+        {
+            tr>td:first-child
+            {color: unset;}
+            .low_earning>.amount
+            {
+                color: $redColor;
+            }
+            .high_earning>td:nth-child(2)
+            {
+                color: $greenColor;
+            }
+            .earning
+            {
+                font-weight: 500;
+            }
+        }
+    }
 }

@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./assets/plugins/jquery.js"></script>
     <script src="./assets/js/nav.js" defer></script>
+    <!-- CDN -->
+    <!-- CDN -->
+
+    
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <title>Dashboard</title>
 </head>
 <body class="dashboard">
@@ -85,15 +91,76 @@
         <div class="header">
             <div class="left">
                 <div class="title">
-                    PAGE TITLE
+                    Dashboard
                 </div>
             </div>
             <div class="right">
-                RIGHT3
+                <div class="manage_ussers">
+                    <button class="button_red button_manage_users">Manage Users</button>
+                </div>
             </div>
         </div>
         <div class="content_body">
-            
+            <div class="projects card">
+                <div class="title">Projects</div>
+                <div class="current_projects project_list_container">
+                    <div class="label">Current</div>
+                    <ul class="current_project_list project_list">
+                        <li>Ndure Jhang</li>
+                        <li>Shoebox Sahiwal</li>
+                    </ul>
+                </div>
+                <div class="upcomming_projects project_list_container">
+                    <div class="label">Upcomming</div>
+                    <ul class="upcomming_project_list project_list">
+                        <li>Ndure Jhang</li>
+                        <li>Shoebox Sahiwal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pending_payments card">
+                <div class="title">Pending Payments</div>
+                <table>
+                    <tr>
+                        <th>Project</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>Ndure Jhang</td>
+                        <td>322,323,233</td>
+                    </tr>
+                    <tr>
+                        <td>Shoebox Sahiwal</td>
+                        <td>322,323</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="earnings card">
+                <div class="title">Earnings</div>
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr class="low_earning">
+                        <td>January</td>
+                        <td>323,233</td>
+                    </tr>
+                    <tr class="high_earning">
+                        <td>February</td>
+                        <td>723,233</td>
+                    </tr>
+                    <tr class="low_earning">
+                        <td>March</td>
+                        <td>623,233</td>
+                    </tr>
+                    <tr class="high_earning">
+                        <td>April</td>
+                        <td>823,233</td>
+                    </tr>
+
+                </table>
+            </div>
         </div>
     </div>
 </body>

@@ -14,21 +14,25 @@ $(document).ready(
         cashRadioNew.addEventListener('click', function()
         {
             $('#select_new_account').hide();
+            $('#withdrawal_new').parent().hide();
             $('#select_new_transaction').show();
         })
         accountRadioNew.addEventListener('click', function()
         {
             $('#select_new_account').show();
+            $('#withdrawal_new').parent().show();
             $('#select_new_transaction').hide();
         })
         cashRadio.addEventListener('click', function()
         {
             $('#select_account').hide();
+            $('#withdrawal').parent().hide();
             $('#select_transaction').show();
         })
         accountRadio.addEventListener('click', function()
         {
             $('#select_account').show();
+            $('#withdrawal').parent().show();
             $('#select_transaction').hide();
         })
     }
