@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/plugins/jquery.js"></script>
+    <script src="./assets/js/nav.js" defer></script>
+    <script src="./assets/js/behaviour.js" defer></script>
+    
+    <!-- CDN -->
+    <!-- CDN -->
+
+    <!-- DATATABLE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Beneficiary Management</title>
+</head>
+<body class="beneficiaries">
+    <div class="page_content">
+        <div class="header">
+            <div class="left">
+                <div class="title">
+                    Beneficiary Management
+                </div>
+            </div>
+            <div class="right">
+                <div class="option_buttons">
+                    
+                    <button class="button_red button_add_beneficiary">Add Beneficary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_body">
+            <table class="beneficiary_list_table list_table card">
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Beneficiary Name</th>
+                        <th>Account Title</th>
+                        <th>Bank</th>
+                        <th>Account Number</th>
+                        <th>Designation</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Hanzala Zahid</td>
+                        <td>Hanzala Zahid</td>
+                        <td>Habib Bank LTD</td>
+                        <td>09067900615003</td>
+                        <td>Brother</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tayyab Zahid</td>
+                        <td>Tayyab Zahid</td>
+                        <td>Habib Bank LTD</td>
+                        <td>09067900405503</td>
+                        <td>Brother</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ameer Hamza</td>
+                        <td>Hamza</td>
+                        <td>UBL</td>
+                        <td>02194744893</td>
+                        <td>Electrician</td>
+                        <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="dialog delete_warning_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Delete Beneficary</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="container">
+                            <div class="message">
+                                Are you sure you want to delete [Beneficiary Details]?
+                            </div>
+                            <div class="buttons">
+                                <button class="button_black button_cancel_delete">Cancel</button>
+                                <button class="button_red">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog add_beneficiary_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Add Beneficary</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <input type="text " name="input_new_beneficiary" placeholder="Enter Beneficiary Name">
+                            </div>
+                            <div class="form_group">
+                                <select name="bank_new_select" id="">
+                                    <option value="0">--Select Bank--</option>
+                                    <option value="Al Baraka Bank (Pakistan) Limited">Al Baraka Bank (Pakistan) Limited</option>
+                                    <option value="Allied Bank Limited">Allied Bank Limited</option>
+                                    <option value="Askari Bank">Askari Bank</option>
+                                    <option value="Bank Alfalah Limited">Bank Alfalah Limited</option>
+                                    <option value="Bank Al-Habib Limited">Bank Al-Habib Limited</option>
+                                    <option value="BankIslami Pakistan Limited">BankIslami Pakistan Limited</option>
+                                    <option value="Citi Bank">Citi Bank</option>
+                                    <option value="Deutsche Bank A.G">Deutsche Bank A.G</option>
+                                    <option value="The Bank of Tokyo-Mitsubishi UFJ">The Bank of Tokyo-Mitsubishi UFJ</option>
+                                    <option value="Dubai Islamic Bank Pakistan Limited">Dubai Islamic Bank Pakistan Limited</option>
+                                    <option value="Faysal Bank Limited">Faysal Bank Limited</option>
+                                    <option value="First Women Bank Limited">First Women Bank Limited</option>
+                                    <option value="Habib Bank Limited">Habib Bank Limited</option>
+                                    <option value="Standard Chartered Bank (Pakistan) Limited">Standard Chartered Bank (Pakistan) Limited</option>
+                                    <option value="Habib Metropolitan Bank Limited">Habib Metropolitan Bank Limited</option>
+                                    <option value="Industrial and Commercial Bank of China">Industrial and Commercial Bank of China</option>
+                                    <option value="Industrial Development Bank of Pakistan">Industrial Development Bank of Pakistan</option>
+                                    <option value="JS Bank Limited">JS Bank Limited</option>
+                                    <option value="MCB Bank Limited">MCB Bank Limited</option>
+                                    <option value="MCB Islamic Bank Limited">MCB Islamic Bank Limited</option>
+                                    <option value="Meezan Bank Limited">Meezan Bank Limited</option>
+                                    <option value="National Bank of Pakistan">National Bank of Pakistan</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <input type="text " name="input_new_account_title" placeholder="Enter Account Title">
+                            </div>
+                            <div class="form_group">
+                                <input type="number" name="input_new_account_number" id="" placeholder="Enter Account Number">
+                            </div>
+                            <div class="form_group">
+                                <input type="text" name="input_new_designation" id="" placeholder="Enter Beneficiary Designation">
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Add Beneficary</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dialog edit_beneficiary_dialog">
+                <div class="model card">
+                    <div class="head">
+                        <div class="container">
+                            <div class="left">Edit Beneficary</div>
+                            <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <form action="">
+                            <div class="form_group">
+                                <input type="text " name="input_beneficiary" placeholder="Enter Beneficiary Name">
+                            </div>
+                            <div class="form_group">
+                                <select name="bank_select" id="">
+                                    <option value="0">--Select Bank--</option>
+                                    <option value="Al Baraka Bank (Pakistan) Limited">Al Baraka Bank (Pakistan) Limited</option>
+                                    <option value="Allied Bank Limited">Allied Bank Limited</option>
+                                    <option value="Askari Bank">Askari Bank</option>
+                                    <option value="Bank Alfalah Limited">Bank Alfalah Limited</option>
+                                    <option value="Bank Al-Habib Limited">Bank Al-Habib Limited</option>
+                                    <option value="BankIslami Pakistan Limited">BankIslami Pakistan Limited</option>
+                                    <option value="Citi Bank">Citi Bank</option>
+                                    <option value="Deutsche Bank A.G">Deutsche Bank A.G</option>
+                                    <option value="The Bank of Tokyo-Mitsubishi UFJ">The Bank of Tokyo-Mitsubishi UFJ</option>
+                                    <option value="Dubai Islamic Bank Pakistan Limited">Dubai Islamic Bank Pakistan Limited</option>
+                                    <option value="Faysal Bank Limited">Faysal Bank Limited</option>
+                                    <option value="First Women Bank Limited">First Women Bank Limited</option>
+                                    <option value="Habib Bank Limited">Habib Bank Limited</option>
+                                    <option value="Standard Chartered Bank (Pakistan) Limited">Standard Chartered Bank (Pakistan) Limited</option>
+                                    <option value="Habib Metropolitan Bank Limited">Habib Metropolitan Bank Limited</option>
+                                    <option value="Industrial and Commercial Bank of China">Industrial and Commercial Bank of China</option>
+                                    <option value="Industrial Development Bank of Pakistan">Industrial Development Bank of Pakistan</option>
+                                    <option value="JS Bank Limited">JS Bank Limited</option>
+                                    <option value="MCB Bank Limited">MCB Bank Limited</option>
+                                    <option value="MCB Islamic Bank Limited">MCB Islamic Bank Limited</option>
+                                    <option value="Meezan Bank Limited">Meezan Bank Limited</option>
+                                    <option value="National Bank of Pakistan">National Bank of Pakistan</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <input type="text " name="input_account_title" placeholder="Enter Account Title">
+                            </div>
+                            <div class="form_group">
+                                <input type="number" name="input_account_number" id="" placeholder="Enter Account Number">
+                            </div>
+                            <div class="form_group">
+                                <input type="text" name="input_designation" id="" placeholder="Enter Beneficiary Designation">
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.beneficiary_list_table').DataTable();
+    </script>
+</body>
+</html>

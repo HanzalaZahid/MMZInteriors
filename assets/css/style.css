@@ -181,10 +181,6 @@ body .page_content .header .left .title {
   font-size: 34px;
   font-weight: bold;
 }
-body .page_content .header .right button {
-  width: 120px;
-  padding: 6px 0px;
-}
 body .sort_options {
   margin-bottom: 22px;
 }
@@ -236,6 +232,7 @@ button {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   min-width: 100px;
+  padding: 6px 22px;
 }
 
 .button_red {
@@ -389,7 +386,4 @@ label, input[type=radio] {
 }
 .dialog .model .body .form_group > .inline_group {
   margin-bottom: 28px;
-}
-.dialog .model button {
-  padding: 6px 22px;
 }

@@ -37,11 +37,7 @@ body
             }
             .right
             {
-                button
-                {
-                    width: 120px;
-                    padding: 6px 0px;
-                }
+
             }
         }
         .content_body
@@ -106,6 +102,7 @@ button
     cursor: pointer;
     transition: all ease .3s;
     min-width: 100px;
+    padding: 6px 22px;
 }
 .button_black
 {
@@ -258,10 +255,6 @@ label, input[type=radio]
             }
             
         }
-        button
-        {
-            
-            padding: 6px 22px;
-        }
+
     }
 }

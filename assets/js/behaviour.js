@@ -5,9 +5,11 @@ $(document).ready(
         let editClientDialog = document.querySelector('.edit_client_dialog');
         let editProjectDialog = document.querySelector('.edit_project_dialog');
         let editTransactionDialog = document.querySelector('.edit_transaction_dialog');
+        let editBeneficaryDialog = document.querySelector('.edit_beneficiary_dialog');
         let addClientDialog = document.querySelector('.add_client_dialog');
         let addProjectDialog = document.querySelector('.add_project_dialog');
         let addTransactionDialog = document.querySelector('.add_transaction_dialog');
+        let addBeneficiaryDialog = document.querySelector('.add_beneficiary_dialog');
         let deleteWarningDialog = document.querySelector('.delete_warning_dialog');
         $('.clients .button_list_change').click(
             function()
@@ -25,6 +27,12 @@ $(document).ready(
             function()
             {
                 editTransactionDialog.style.display = 'flex';
+            }
+        )
+        $('.beneficiaries .button_list_change').click(
+            function()
+            {
+                editBeneficaryDialog.style.display = 'flex';
             }
         )
 
@@ -64,6 +72,12 @@ $(document).ready(
                 addTransactionDialog.style.display = 'flex';
             }
         )
+        $('.button_add_beneficiary').click(
+            function()
+            {
+                addBeneficiaryDialog.style.display = 'flex';
+            }
+        )
         $('.button_cancel_delete').click(
             function()
             {
@@ -71,35 +85,5 @@ $(document).ready(
             }
         )
 
-
-
-
-        // RADIO FOR TRANSACTION CHOICE
-        // RADIO FOR TRANSACTION CHOICE
-
-        let cashRadioNew = addTransactionDialog.querySelector('.cash_radio');
-        let accountRadioNew = addTransactionDialog.querySelector('.account_radio');
-        let cashRadio = editTransactionDialog.querySelector('.cash_radio');
-        let accountRadio = editTransactionDialog.querySelector('.account_radio');
-        cashRadioNew.addEventListener('click', function()
-        {
-            $('#select_new_account').hide();
-            $('#select_new_transaction').show();
-        })
-        accountRadioNew.addEventListener('click', function()
-        {
-            $('#select_new_account').show();
-            $('#select_new_transaction').hide();
-        })
-        cashRadio.addEventListener('click', function()
-        {
-            $('#select_account').hide();
-            $('#select_transaction').show();
-        })
-        accountRadio.addEventListener('click', function()
-        {
-            $('#select_account').show();
-            $('#select_transaction').hide();
-        })
     }
 )
