@@ -20,5 +20,8 @@ $(document).ready(
                 subnav.style.display = 'none';
             }
         })
+
+        $('.list_table').DataTable();
+
     }
 )

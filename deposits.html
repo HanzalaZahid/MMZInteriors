@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Clients</title>
+    <title>Transactions</title>
 </head>
-<body class="clients">
+<body class="deposits">
     <header>
         <div class="header_container">
             <div class="left">
@@ -96,51 +96,48 @@
         <div class="header">
             <div class="left">
                 <div class="title">
-                    Clients
+                    Deposits
                 </div>
             </div>
             <div class="right">
-                <div class="add_client">
-                    <button class="button_red button_add_client">Add Client</button>
+                <div class="option_buttons">   
+                    <button class="button_red button_add_deposit">Add Deposit</button>
                 </div>
             </div>
         </div>
         <div class="content_body">
-            <table class="client_list_table list_table card">
+            <table class="deposits_list_table list_table card">
                 <thead>
                     <tr>
-                        <th>Client ID</th>
-                        <th>Client Name</th>
-                        <th>Client Type</th>
-                        <th>Total Projects</th>
-                        <th>Current Projects</th>
-                        <th>Total Invested</th>
-                        <th>Total Profit</th>
-                        <th>Due Payments</th>
+                        <th>Serial No.</th>
+                        <th>Project</th>
+                        <th>Project Bill</th>
+                        <th>Paid Amount</th>
+                        <th>Remaining Amount</th>
+                        <th>Date Deposited</th>
+                        <th>Account</th>
                         <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>NDURE</td>
-                        <td>Company</td>
-                        <td>28</td>
-                        <td>2</td>
-                        <td>98,768,735</td>
-                        <td>8,768,735</td>
-                        <td>768,735</td>
+                        <td>Ndure Jhang</td>
+                        <td>4,543,543</td>
+                        <td>3,434,233</td>
+                        <td>934,344</td>
+                        <td>13-4-2022</td>
+                        <td>09067900485503</td>
                         <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Servis Shoes</td>
-                        <td>Private</td>
-                        <td>58</td>
-                        <td>3</td>
-                        <td>8,768,735</td>
-                        <td>768,735</td>
-                        <td>68,735</td>
+                        <td>Sahilwal ShoeBox</td>
+                        <td>543,543</td>
+                        <td>543,543</td>
+                        <td>0</td>
+                        <td>11-7-2022</td>
+                        <td>09067900485503</td>
                         <td><button class="button_black button_list_change">Change</button><button class="button_red button_list_delete">Delete</button></td>
                     </tr>
                 </tbody>
@@ -149,14 +146,14 @@
                 <div class="model card">
                     <div class="head">
                         <div class="container">
-                            <div class="left">Delete Client</div>
+                            <div class="left">Delete Transaction</div>
                             <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
                         </div>
                     </div>
                     <div class="body">
                         <div class="container">
                             <div class="message">
-                                Are you sure you want to delete [CLIENT NAME]?
+                                Are you sure you want to delete [DEPOSIT DETAILS]?
                             </div>
                             <div class="buttons">
                                 <button class="button_black button_cancel_delete">Cancel</button>
@@ -166,55 +163,72 @@
                     </div>
                 </div>
             </div>
-            <div class="dialog add_client_dialog">
+            <div class="dialog add_deposit_dialog">
                 <div class="model card">
                     <div class="head">
                         <div class="container">
-                            <div class="left">Add Client</div>
+                            <div class="left">Add Deposit</div>
                             <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
                         </div>
                     </div>
                     <div class="body">
                         <form action="">
                             <div class="form_group">
-                                <label for="client_name"></label>
-                                <input type="text" id="client_name" placeholder="Enter Client Name" name="input_new_client_name" class="client_name">
-                            </div>
-                            <div class="form_group">
-                                <label for="client_type"></label>
-                                <select name="ddl_client_type" id="client_type">
-                                    <option value="0">--Select Catagory--</option>
-                                    <option value="1">Comapany</option>
-                                    <option value="2">Private</option>
+                                <select name="select_project_new" id="select_project_new">
+                                    <option value="0">--Select Project--</option>
+                                    <option value="1">Ndure Jhang</option>
+                                    <option value="2">Servis Shoes</option>
                                 </select>
                             </div>
                             <div class="form_group">
-                                <button class="button_red" type="submit">Add Client</button>
+                                <input type="number" name="amount_new" id="amount_new" placeholder="Enter Amount">
+                            </div>
+                            <div class="form_group">
+                                <input type="date" placeholder="Enter Date" name="date_new" id="date_new" onfocus="this.type='date'" onblur="this.type='text'">
+                            </div>
+                            <div class="form_group">
+                                <select name="select_account_new" id="select_account_new">
+                                    <option value="0">--Select Account--</option>
+                                    <option value="1">09067900485503 HBL</option>
+                                    <option value="2">090679006132323 HBL</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <button class="button_red" type="submit">Add Deposit</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="dialog edit_client_dialog">
+
+            <div class="dialog edit_deposit_dialog">
                 <div class="model card">
                     <div class="head">
                         <div class="container">
-                            <div class="left">Edit Client</div>
+                            <div class="left">Edit Deposit</div>
                             <div class="right"><i class="fa-solid fa-xmark button_dialog_close"></i></div>
                         </div>
                     </div>
                     <div class="body">
                         <form action="">
                             <div class="form_group">
-                                <label for="client_name"></label>
-                                <input type="text" id="client_name" name="input_client_name" class="client_name">
+                                <select name="select_project" id="select_project">
+                                    <option value="0">--Select Project--</option>
+                                    <option value="1">Ndure Jhang</option>
+                                    <option value="2">Servis Shoes</option>
+                                </select>
                             </div>
                             <div class="form_group">
-                                <label for="client_type"></label>
-                                <select name="ddl_client_type" id="client_type">
-                                    <option value="0">--Select Catagory--</option>
-                                    <option value="1">Comapany</option>
-                                    <option value="2">Private</option>
+                                <input type="number" name="amount" id="amount" placeholder="Enter Amount">
+                            </div>
+                            <div class="form_group">
+                                <input type="date" placeholder="Enter Date" name="date" id="date" onfocus="this.type='date'" onblur="this.type='text'">
+                            </div>
+                            <div class="form_group">
+                                <select name="select_account" id="select_account">
+                                    <option value="0">--Select Account--</option>
+                                    <option value="1">09067900485503 HBL</option>
+                                    <option value="2">090679006132323 HBL</option>
                                 </select>
                             </div>
                             <div class="form_group">
@@ -226,5 +240,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

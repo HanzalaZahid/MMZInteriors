@@ -6,10 +6,12 @@ $(document).ready(
         let editProjectDialog = document.querySelector('.edit_project_dialog');
         let editTransactionDialog = document.querySelector('.edit_transaction_dialog');
         let editBeneficaryDialog = document.querySelector('.edit_beneficiary_dialog');
+        let editDepositDialog = document.querySelector('.edit_deposit_dialog');
         let addClientDialog = document.querySelector('.add_client_dialog');
         let addProjectDialog = document.querySelector('.add_project_dialog');
         let addTransactionDialog = document.querySelector('.add_transaction_dialog');
         let addBeneficiaryDialog = document.querySelector('.add_beneficiary_dialog');
+        let addDepositDialog = document.querySelector('.add_deposit_dialog');
         let deleteWarningDialog = document.querySelector('.delete_warning_dialog');
         $('.clients .button_list_change').click(
             function()
@@ -33,6 +35,12 @@ $(document).ready(
             function()
             {
                 editBeneficaryDialog.style.display = 'flex';
+            }
+        )
+        $('.deposits .button_list_change').click(
+            function()
+            {
+                editDepositDialog.style.display = 'flex';
             }
         )
 
@@ -76,6 +84,12 @@ $(document).ready(
             function()
             {
                 addBeneficiaryDialog.style.display = 'flex';
+            }
+        )
+        $('.button_add_deposit').click(
+            function()
+            {
+                addDepositDialog.style.display = 'flex';
             }
         )
         $('.button_cancel_delete').click(
